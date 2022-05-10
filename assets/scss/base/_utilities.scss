@@ -1,0 +1,16 @@
+.text-yellow {
+  color: #fec627;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/text-line.svg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    // bottom: 0;
+    top: 85%;
+    left: 0;
+  }
+}

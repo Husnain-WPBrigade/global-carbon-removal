@@ -1,0 +1,85 @@
+.criteria {
+  background-color: #f5f5f5;
+  padding: 79px 0 60px 0;
+
+  &__content {
+    text-align: center;
+    @include mediaManager(800px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 14px;
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+  }
+
+  &__slider {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+  &__description {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 5px 192px;
+    color: $color-primary;
+    line-height: 1.5;
+
+    @include mediaManager(1030px) {
+      padding: 0 121px;
+    }
+
+    @include mediaManager(880px) {
+      padding: 0 46px;
+    }
+  }
+
+  // *------------------ Mobile - Breakpoint ---------------
+  @include mediaManager(640px) {
+    padding: 41px 0 36px 0;
+
+    &__text {
+      padding: 0 10px;
+      margin-bottom: 18px;
+    }
+
+    &__heading {
+      margin-bottom: 9px;
+    }
+
+    &__description {
+      font-size: 14px;
+      padding: 0;
+    }
+  }
+}
+
+.criteria-slider__item.swiper-slide {
+  background-color: transparent;
+}
+
+.criteria-slider__pagination .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.criteria-slider__pagination .swiper-pagination-bullet {
+  width: 17px;
+  height: 5px;
+  background-color: $color-primary;
+  border-radius: 0;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.criteria-slider__pagination .swiper-pagination-bullet-active {
+  width: 30px;
+  background-color: $color-secondary;
+}

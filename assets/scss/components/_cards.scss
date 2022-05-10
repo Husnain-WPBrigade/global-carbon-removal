@@ -1,0 +1,320 @@
+.feature-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px 24px;
+
+  @include mediaManager(640px) {
+    padding: 10px;
+  }
+
+  &__image {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  &__content {
+    padding: 10px 0px;
+    @include mediaManager(640px) {
+    }
+  }
+
+  &__image img {
+    width: auto;
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: $color-primary;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 11px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: $color-secondary;
+    }
+  }
+
+  &__description {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: $color-text;
+  }
+}
+
+// ------------------------------- Plan - Card ---------------------------
+.plan-card {
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include mediaManager(990px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @include mediaManager(768px) {
+    width: 100%;
+  }
+
+  @include mediaManager(640px) {
+    width: 100%;
+    height: 200px;
+  }
+
+  &::before {
+    font-family: "Times New Roman", Times, serif;
+    counter-increment: plan-card;
+    content: "" counter(plan-card);
+
+    position: absolute;
+    top: 0%;
+    left: 4%;
+    font-size: 70px;
+    font-weight: 700;
+    opacity: 0.2;
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+
+// ------------------------------- Policy - Card ---------------------------
+
+.policy-card {
+  background-color: $color-white;
+  padding: 20px 0;
+
+  @include mediaManager(640px) {
+    padding: 0;
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: $color-primary;
+    margin-bottom: 23px;
+
+    @include mediaManager(640px) {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+
+// ------------------------------- Team - Card -----------------------
+.team-card {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0px 0px 5px 5px;
+  position: relative;
+
+  @include mediaManager(640px) {
+  }
+
+  &__content-bg {
+    background-color: $color-secondary;
+    padding: 0px;
+    display: flex;
+    height: 237px;
+  }
+
+  &__name {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-primary;
+    margin-bottom: 5px;
+  }
+
+  &__role {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    font-size: 15px;
+    margin-bottom: 7px;
+    line-height: 1.45;
+  }
+
+  &__content {
+    padding: 15px 15px 21px 22px;
+    background-color: $color-white;
+    position: relative;
+    top: -20px;
+    margin-right: 9px;
+    text-align: left;
+    min-height: 188px;
+    flex: auto;
+
+    @include mediaManager(640px) {
+      padding: 15px 15px 44px 22px;
+      top: -28px;
+      margin-right: 15px;
+    }
+  }
+
+  &__image {
+    display: flex;
+  }
+
+  &__icon {
+    width: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.card-wrapper {
+  display: flex;
+}
+
+// ------------------------------- Logo - Card -----------------------
+.logo-card {
+  background-color: $color-white;
+  height: 212px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 5px rgba($color-primary, 0.2);
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__image {
+    margin-bottom: 16px;
+    position: relative;
+    padding: 20px 20px 32px 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35%;
+      border-bottom: 2px dashed $color-secondary;
+      left: 50%;
+      transform: translate(-50%);
+      top: 100%;
+    }
+  }
+
+  &__content {
+    padding: 9px 5px 10px 8px;
+    min-height: 83px;
+  }
+
+  &__description {
+    color: $color-primary;
+    letter-spacing: 0.6px;
+    line-height: 1.4;
+  }
+}
+
+// ------------------------------- Resources - Card -----------------------
+.resources-card {
+  height: 359px;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba($color-primary, 0.85)
+    ),
+    url("../images/resources-image-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 20px 34px 40px;
+  text-align: left;
+
+  @include mediaManager(640px) {
+    height: 213px;
+    padding: 10px 10px 16px 14px;
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-white;
+    line-height: 1.25;
+
+    @include mediaManager(640px) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.resources-slider__item:nth-of-type(odd) .resources-card {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba($color-primary, 0.85)
+    ),
+    url("../images/resources-image-2.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.resources-slider__item:nth-child(3n + 3) .resources-card {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba($color-primary, 0.85)
+    ),
+    url("../images/resources-image-3.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}

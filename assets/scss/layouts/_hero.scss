@@ -1,0 +1,92 @@
+.hero {
+  width: 100%;
+  position: relative;
+
+  &__bg {
+    display: flex;
+    height: 670px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 49.6%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  &__heading {
+    color: $color-white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    letter-spacing: 1.5;
+  }
+
+  &__content {
+    padding: 0 40px;
+  }
+
+  // * --------------------- Laptop - Breakpoints -------------------
+  @include mediaManager(980px) {
+    &__heading {
+      font-size: 60px;
+    }
+
+    &__description {
+      font-size: 19px;
+    }
+  }
+
+  // * --------------------- Tablet - Breakpoints -------------------
+
+  @include mediaManager(768px) {
+    &__heading {
+      font-size: 50px;
+    }
+
+    &__description {
+      font-size: 17px;
+    }
+  }
+
+  // * --------------------- Mobile - Breakpoints -------------------
+  @include mediaManager(640px) {
+    &__bg {
+      height: 300px;
+    }
+
+    &__content-wrapper {
+      top: 50%;
+    }
+
+    &__heading {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    &__description {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+
+    &__content {
+      padding: 0 20px;
+    }
+  }
+}

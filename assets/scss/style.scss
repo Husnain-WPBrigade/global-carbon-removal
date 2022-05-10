@@ -1,0 +1,38 @@
+// Abstracts Files
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/functions";
+
+// Base Files
+@import "./base/base";
+@import "./base/animation";
+@import "./base/typography";
+@import "./base/utilities";
+
+// Components Files
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/cards";
+@import "./components/composition";
+@import "./components/inputs";
+@import "./components/ctaBox";
+
+// Layouts Files
+@import "./layouts/navbar";
+@import "./layouts/hero";
+@import "./layouts/criteriaSection";
+@import "./layouts/postSection";
+@import "./layouts/aboutSection";
+@import "./layouts/planSection";
+@import "./layouts/policySection";
+@import "./layouts/videoSection";
+@import "./layouts/teamSection";
+@import "./layouts/partnersSection";
+@import "./layouts/problemSection";
+@import "./layouts/logoSection";
+@import "./layouts/feedbackSection";
+@import "./layouts/resourcesSection";
+@import "./layouts/footer";
+
+// Pages Files
+@import "./pages/homePage";

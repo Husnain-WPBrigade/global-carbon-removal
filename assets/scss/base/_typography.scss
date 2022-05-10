@@ -1,0 +1,33 @@
+// h1 {
+//   font-family: "Times New Roman", Times, serif;
+//   font-weight: 700;
+//   font-size: it;
+// }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+
+  @include mediaManager(640px) {
+    font-size: 16px;
+  }
+}
+
+.heading {
+  &__block {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: $color-primary;
+
+    @include mediaManager(640px) {
+      font-size: 26px;
+    }
+  }
+
+  &__block--secondary {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 43px;
+    font-weight: 400;
+  }
+}

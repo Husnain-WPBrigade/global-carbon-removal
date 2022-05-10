@@ -1,0 +1,162 @@
+.plan-section {
+  padding: 80px 0 85px 0;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  &__content {
+    width: 40%;
+    position: absolute;
+    padding: 14px 0 0 67px;
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    padding: 17px 29px;
+    margin-left: 1px;
+  }
+  &__cards {
+    counter-reset: plan-card;
+    width: 73.6%;
+    display: flex;
+    position: relative;
+    height: 579px;
+    margin-left: auto;
+  }
+
+  &__card {
+    background-color: $color-primary;
+    border-radius: 5px;
+
+    &:nth-child(1) {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        left: 100%;
+        top: 53.5%;
+        border-radius: 0px 0px 5px 0px;
+        background-color: #e4e4e4;
+        position: absolute;
+
+        @include mediaManager(990px) {
+          top: 34%;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $color-secondary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      &::after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        left: 100%;
+        top: 53.5%;
+        border-radius: 0px 0px 5px 0px;
+        background-color: #e4e4e4;
+        position: absolute;
+
+        @include mediaManager(990px) {
+          top: 34%;
+        }
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  //   *------------------------------- Tablet - Breakpoint ------------------------------
+
+  @include mediaManager(768px) {
+    padding: 50px 15px;
+
+    &__wrapper {
+      flex-direction: column;
+      position: unset;
+    }
+
+    &__content {
+      flex-direction: column;
+      position: unset;
+      position: unset;
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__cards {
+      width: 100%;
+      position: unset;
+      height: auto;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    &__card {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(1) {
+        position: unset;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        position: unset;
+        transform: translate(0);
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        position: unset;
+      }
+    }
+  }
+
+  //  * ------------------------------- Mobile - Breakpoint ------------------------------
+  @include mediaManager(640px) {
+    padding: 37px 15px 40px 15px;
+
+    &__content {
+      margin-bottom: 40px;
+    }
+
+    &__heading {
+      margin-bottom: 18px;
+    }
+  }
+}

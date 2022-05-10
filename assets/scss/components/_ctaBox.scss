@@ -1,0 +1,90 @@
+.cta-box {
+  padding: 20px;
+  //   height: 300px;
+  width: 100%;
+  background-color: $color-secondary;
+  color: $color-white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  //   top: -126px;
+  padding: 48px 0 43px 0;
+
+  @include mediaManager(768px) {
+    padding: 48px 25px 43px 25px;
+  }
+
+  @include mediaManager(640px) {
+    align-items: center;
+    text-align: center;
+    padding: 38px 25px 35px 25px;
+  }
+
+  &-wrapper {
+    position: absolute;
+    width: 59.8%;
+    top: -125px;
+
+    @include mediaManager(768px) {
+      width: 100%;
+      left: 0;
+      padding: 0 25px;
+      top: -211px;
+    }
+
+    @include mediaManager(640px) {
+      top: -157px;
+      padding: 0 18px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vh;
+    height: 100%;
+    background-color: $color-secondary;
+    right: 100%;
+    top: 0;
+
+    @include mediaManager(768px) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 14px;
+
+    @include mediaManager(640px) {
+      font-size: 26px;
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $color-white;
+    position: relative;
+
+    @include mediaManager(640px) {
+      font-size: 16px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/arrow-icon.svg");
+      background-repeat: no-repeat;
+      height: 15px;
+      width: 15px;
+      left: 108%;
+      top: 36%;
+    }
+  }
+}

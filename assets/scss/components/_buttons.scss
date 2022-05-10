@@ -1,0 +1,22 @@
+.btn {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &--primary {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 50px;
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:hover {
+      background-color: darken($color-secondary, 5%);
+    }
+  }
+}

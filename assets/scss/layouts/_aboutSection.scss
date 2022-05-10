@@ -1,0 +1,100 @@
+.about-section {
+  background-color: #fafafa;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  &__content {
+    width: 57.3%;
+    position: absolute;
+    z-index: 2;
+    top: 10.7%;
+    background-color: rgba($color-white, 0.8);
+    padding: 43px 50px 50px 69px;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &__heading {
+    margin-bottom: 19px;
+  }
+
+  &__description {
+    margin-bottom: 48px;
+    line-height: 1.53;
+  }
+
+  &__btn {
+    padding: 17px 64px;
+  }
+
+  &__image {
+    width: 69.2%;
+    margin-left: auto;
+    contain: layout;
+    border-left: 8px solid $color-secondary;
+    display: flex;
+  }
+
+  &__image img {
+    width: auto;
+  }
+
+  //  * ---------------------------- Tablet- Breakpoint --------------------------------
+
+  @include mediaManager(768px) {
+    padding: 39px 15px;
+
+    &__wrapper {
+      flex-direction: column-reverse;
+      position: unset;
+    }
+
+    &__content {
+      position: unset;
+      width: 100%;
+      box-shadow: none;
+      padding: 0;
+      background-color: transparent;
+      padding: 0 0 0 4px;
+    }
+
+    &__heading {
+      margin-bottom: 11px;
+    }
+
+    &__description {
+      margin-bottom: 9px;
+      line-height: 1.62;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__image {
+      border-left: none;
+      border-bottom: 8px solid $color-secondary;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    &__image img {
+      width: 100%;
+    }
+  }
+
+  //   *---------------------------- Mobile- Breakpoint --------------------------------
+
+  @include mediaManager(640px) {
+    &__image {
+      max-height: 199px;
+    }
+
+    &__image img {
+      object-fit: cover;
+    }
+  }
+}

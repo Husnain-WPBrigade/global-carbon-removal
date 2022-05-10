@@ -1,0 +1,55 @@
+.problem-section {
+  padding: 0 15px;
+
+  @include mediaManager(768px) {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    width: 57.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 80px 20px 0;
+    color: $color-white;
+    background-color: $color-secondary;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100vh;
+      right: 100%;
+      top: 0;
+      background-color: $color-secondary;
+    }
+  }
+
+  &__heading {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 31px;
+  }
+
+  &__description {
+    font-size: 17px;
+    margin-bottom: 7px;
+    line-height: 1.55;
+  }
+
+  &__image {
+    width: 42.8%;
+    contain: layout;
+    display: flex;
+
+    & img {
+      width: auto;
+    }
+  }
+}
