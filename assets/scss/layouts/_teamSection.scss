@@ -37,6 +37,16 @@
   padding: 0 0 40px 0;
 }
 
+.team-slider__card {
+  display: flex;
+}
+
+.team-slider__item.swiper-slide {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
 .team-slider__pagination .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,

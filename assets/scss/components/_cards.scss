@@ -184,6 +184,9 @@
     text-align: left;
     min-height: 188px;
     flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @include mediaManager(640px) {
       padding: 15px 15px 44px 22px;
