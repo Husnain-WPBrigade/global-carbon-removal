@@ -1,6 +1,5 @@
 .cta-box {
   padding: 20px;
-  //   height: 300px;
   width: 100%;
   background-color: $color-secondary;
   color: $color-white;
@@ -9,7 +8,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  //   top: -126px;
   padding: 48px 0 43px 0;
 
   @include mediaManager(768px) {
@@ -79,12 +77,13 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../images/arrow-icon.svg");
+      background-image: url(../images/arrow-icon.svg);
       background-repeat: no-repeat;
-      height: 15px;
+      height: 11px;
       width: 15px;
-      left: 108%;
-      top: 36%;
+      right: -21px;
+      top: 50%;
+      transform: translate(4px, -40%);
     }
   }
 }

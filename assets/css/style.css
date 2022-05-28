@@ -716,12 +716,14 @@ body {
 .cta-box__btn::after {
   content: "";
   position: absolute;
-  background-image: url("../images/arrow-icon.svg");
+  background-image: url(../images/arrow-icon.svg);
   background-repeat: no-repeat;
-  height: 15px;
+  height: 11px;
   width: 15px;
-  left: 108%;
-  top: 36%;
+  right: -21px;
+  top: 50%;
+  -webkit-transform: translate(4px, -40%);
+          transform: translate(4px, -40%);
 }
 
 .header {

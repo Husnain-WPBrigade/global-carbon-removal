@@ -104,7 +104,6 @@ var swiper = new Swiper(".logo-slider__swiper", {
   breakpoints: {
     100: {
       slidesPerView: 1,
-      spaceBetween: 20,
       slidesPerGroup: 1,
     },
 
